@@ -17,12 +17,22 @@ export default defineConfig({
   },
   themeConfig: {
     name: 'Rinokit',
-    logo: '/favicon.svg',
+    logo: '/favicon.svg', // 导航栏图标
     nav: [
       // 顶部导航栏
       { title: '通用组件', link: '/components' },
       { title: '工具函数', link: '/utils' },
       { title: 'Hooks', link: '/hooks' },
     ],
+    socialLinks: {
+      github: 'https://github.com/Ryna755467/Rinokit',
+    },
+    prefersColor: {
+      // 主题切换配置
+      default: 'auto',
+      switch: true,
+    },
+    lastUpdated: true, // 在文档底部显示最后更新时间
+    showLineNum: true, // 显示代码行号
   },
 });
