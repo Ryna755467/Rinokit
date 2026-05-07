@@ -1,9 +1,10 @@
 import { defineConfig } from 'dumi';
+import { defineThemeConfig } from 'dumi-theme-chakra';
 
 export default defineConfig({
   outputPath: 'docs-dist',
   favicons: ['/favicon.svg'], // 标签页图标
-  title: 'Rinokit', // 标签页标题
+  title: 'RinoKit', // 标签页标题
   resolve: {
     docDirs: ['docs'], // 说明文档的解析目录
     atomDirs: [
@@ -16,17 +17,24 @@ export default defineConfig({
     entryFile: './src/index.ts', // 入口文件
   },
   themeConfig: {
-    name: 'Rinokit',
+    ...defineThemeConfig({
+      social: {
+        github: {
+          name: 'RinoKit',
+          link: 'https://github.com/Ryna755467/Rinokit',
+        },
+      },
+      thumbBackground: true,
+      settingPanelVisible: true,
+    }),
+    name: 'RinoKit',
     logo: '/favicon.svg', // 导航栏图标
     nav: [
       // 顶部导航栏
-      { title: '通用组件', link: '/components' },
-      { title: '工具函数', link: '/utils' },
+      { title: 'Components', link: '/components' },
+      { title: 'Utils', link: '/utils' },
       { title: 'Hooks', link: '/hooks' },
     ],
-    socialLinks: {
-      github: 'https://github.com/Ryna755467/Rinokit',
-    },
     prefersColor: {
       // 主题切换配置
       default: 'auto',

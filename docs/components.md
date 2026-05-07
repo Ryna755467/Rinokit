@@ -1,8 +1,8 @@
 ---
-title: 通用组件
+title: Components
 ---
 
-## 组件总览
+## Components 总览
 
 此目录包含所有 UI 组件。
 
