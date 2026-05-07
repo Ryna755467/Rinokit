@@ -6,24 +6,6 @@ title: Hooks
 
 此目录包含所有 React Hooks。
 
-### 使用说明
-
-所有 Hooks 可直接从包名统一引入：
-
-```tsx
-import { useToggle } from 'rinokit';
-
-export default () => {
-  const { value, toggle } = useToggle();
-  return (
-    <div>
-      <p>状态：{String(value)}</p>
-      <button onClick={toggle}>切换状态</button>
-    </div>
-  );
-};
-```
-
 ### Hooks 规范
 
 - 每个 Hook 独立目录，目录名以 use 开头（符合 React Hooks 命名规范）

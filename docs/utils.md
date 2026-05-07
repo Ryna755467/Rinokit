@@ -6,19 +6,6 @@ title: Utils
 
 此目录包含所有通用工具函数。
 
-### 使用说明
-
-所有工具函数可直接从包名统一引入：
-
-```tsx
-import { formatDate } from 'rinokit';
-
-export default () => {
-  const currentTime = formatDate(Date.now());
-  return <div>当前时间：{currentTime}</div>;
-};
-```
-
 ### 工具函数规范
 
 - 每个工具函数模块独立目录，目录名与核心函数名一致
