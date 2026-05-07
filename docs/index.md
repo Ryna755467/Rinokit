@@ -1,7 +1,6 @@
 ---
-title: Rinokit
-
+title: Overview
 hero:
-  title: Rinokit
+  title: RinoKit
   description: A react library developed with dumi
 ---
