@@ -4,12 +4,18 @@
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
       "rinokit": ["src"],
-      "rinokit/*": ["src/*", "*"]
+      "rinokit/*": ["src/*", "*"],
+      "@components": ["src/components"],
+      "@constants": ["src/constants"],
+      "@hooks": ["src/hooks"],
+      "@styles": ["src/styles"],
+      "@types": ["src/types"],
+      "@utils": ["src/utils"]
     }
   },
   "include": [".dumirc.ts", ".fatherrc.ts", "src/**/*"]

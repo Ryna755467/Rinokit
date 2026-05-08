@@ -1,0 +1,1 @@
+export const HOOKS_ERROR_PREFIX = '[rinokit hooks]';
