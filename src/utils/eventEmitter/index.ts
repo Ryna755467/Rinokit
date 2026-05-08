@@ -1,15 +1,15 @@
-export type EventCallback = (...args: unknown[]) => void;
+import { AnyFunction } from '@types';
 
-const events = new Map<string, EventCallback[]>();
+const events = new Map<string, AnyFunction[]>();
 
-const on = (eventName: string, callback: EventCallback): void => {
+const on = (eventName: string, callback: AnyFunction): void => {
   if (!events.has(eventName)) {
     events.set(eventName, []);
   }
   events.get(eventName)!.push(callback);
 };
 
-const off = (eventName: string, callback: EventCallback): void => {
+const off = (eventName: string, callback: AnyFunction): void => {
   if (!events.has(eventName)) return;
 
   const callbacks = events.get(eventName)!.filter((cb) => cb !== callback);
@@ -25,4 +25,4 @@ const emit = (eventName: string, ...args: unknown[]): void => {
   events.get(eventName)!.forEach((callback) => callback(...args));
 };
 
-export const Event = { on, off, emit };
+export const EventEmitter = { on, off, emit };

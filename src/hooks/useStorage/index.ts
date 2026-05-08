@@ -1,16 +1,20 @@
+import { HOOKS_ERROR_PREFIX } from '@constants';
+import { SetState } from '@types';
 import { useEffect, useState } from 'react';
+
+const PREFIX = `${HOOKS_ERROR_PREFIX} useStorage`;
 
 export const useStorage = <T>(
   key: string,
   initialValue: T,
   storage: Storage,
-) => {
+): readonly [T, SetState<T>] => {
   const [value, setValue] = useState<T>(() => {
     try {
       const item = storage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-      console.error(`Error reading from localStorage: ${error}`);
+      console.error(`${PREFIX} - 读取存储失败:`, error);
       return initialValue;
     }
   });
@@ -19,7 +23,7 @@ export const useStorage = <T>(
     try {
       storage.setItem(key, JSON.stringify(value));
     } catch (error) {
-      console.error(`Error writing to localStorage: ${error}`);
+      console.error(`${PREFIX} - 写入存储失败:`, error);
     }
   }, [value, key, storage]);
 
@@ -32,7 +36,7 @@ export const useStorage = <T>(
             setValue(newValue);
           }
         } catch (error) {
-          console.error(`Error parsing localStorage change: ${error}`);
+          console.error(`${PREFIX} - 监听变化失败:`, error);
         }
       }
     };
