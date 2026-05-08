@@ -48,4 +48,12 @@ export default defineConfig({
     lastUpdated: true, // 在文档底部显示最后更新时间
     showLineNum: true, // 显示代码行号
   },
+  alias: {
+    '@components': '/src/components',
+    '@constants': '/src/constants',
+    '@hooks': '/src/hooks',
+    '@styles': '/src/styles',
+    '@types': '/src/types',
+    '@utils': '/src/utils',
+  },
 });
