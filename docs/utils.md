@@ -4,4 +4,36 @@ title: Utils
 
 # Utils
 
-此目录包含所有工具函数。
+这里是所有工具函数的说明文档，`markdown`参考结构如下：
+
+:::info{title=提示信息}
+这是一条提示信息。
+:::
+
+### 调用示例
+
+这是一条调用示例。
+
+```tsx | pure
+import { anyFunction } from 'rinokit';
+```
+
+### 函数定义
+
+```typescript
+export const anyFunction = (...args: unknown[]) : unknown
+```
+
+### 参数列表
+
+| 参数                                           | 说明                         | 类型        | 默认值 |
+| ---------------------------------------------- | ---------------------------- | ----------- | ------ |
+| ...args <Badge type="warning">可变参数</Badge> | 动态传递给回调函数的参数列表 | `unknown[]` | -      |
+
+### 返回值
+
+| 返回值    | 说明 |
+| --------- | ---- |
+| `unknown` | -    |
+
+<br>
