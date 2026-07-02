@@ -1,14 +1,9 @@
 import { defineConfig } from 'dumi';
 import { defineThemeConfig } from 'dumi-theme-chakra';
 
-// github-pages 根路径
-const BASE_PATH = '/Rinokit/';
-
 export default defineConfig({
-  base: BASE_PATH,
-  publicPath: BASE_PATH,
   outputPath: 'docs-dist',
-  favicons: [`${BASE_PATH}favicon.svg`], // 标签页图标
+  favicons: ['favicon.svg'], // 标签页图标
   title: 'RinoKit', // 标签页标题
   resolve: {
     docDirs: ['docs'], // 说明文档的解析目录
@@ -33,7 +28,7 @@ export default defineConfig({
       settingPanelVisible: true,
     }),
     name: 'RinoKit',
-    logo: `${BASE_PATH}favicon.svg`, // 导航栏图标
+    logo: 'favicon.svg', // 导航栏图标
     nav: [
       // 顶部导航栏
       { title: 'Components', link: '/components' },
