@@ -14,7 +14,7 @@
 
 通过 on 订阅事件、emit 触发事件、off 移除指定回调，支持传参给回调函数。
 
-```tsx | pure
+```typescript
 import { EventEmitter } from 'rinokit';
 
 const handleRefresh = (msg: string) => {
@@ -37,6 +37,8 @@ EventEmitter.emit('refresh', '测试');
 ### 函数定义
 
 ```typescript
+import type { AnyFunction } from '@types';
+
 declare const EventEmitter: {
   on: (eventName: string, callback: AnyFunction) => void;
   off: (eventName: string, callback: AnyFunction) => void;

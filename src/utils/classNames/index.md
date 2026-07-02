@@ -10,12 +10,12 @@
 
 支持传入多个字符串、条件布尔值、空值，过滤无效值后拼接为合法的类名字符串。
 
-```tsx | pure
+```typescript
 import { classNames } from 'rinokit';
 
-classNames('box', 'mt-4');
+classNames('box', 'mt-4'); // 'box mt-4'
 
-classNames('tag', isRed ? 'tag--red' : false);
+classNames('tag', isRed ? 'tag--red' : false); // 'tag tag--red'
 ```
 
 ### 函数定义
